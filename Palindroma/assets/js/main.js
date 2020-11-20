@@ -4,7 +4,7 @@ Creare una funzione per capire se la parola inserita è palindroma */
 
 //1. Chiedere all’utente di inserire una parola
 
-var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma").toLowerCase();
+var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma");
 
 //2. Creare una funzione per capire se la parola inserita è palindroma
 
@@ -13,7 +13,9 @@ var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma").
  * @returns  true  verificata - false non verificata
  */
 function palindormaChecker(palindromaWord) {
-  var starChartWord, lastCharWord, check = 0;
+  var starChartWord, lastCharWord;
+  var arrayStar = [];
+  var arrayMirrored = [];
 
   for (var i = 0; i < palindromaWord.length; i++) {
 
@@ -21,26 +23,26 @@ function palindormaChecker(palindromaWord) {
 
     starChartWord = userWord.charAt(i);
     console.log(starChartWord);
+    arrayStar.push(starChartWord);
+    console.log(arrayStar);
     lastCharWord = userWord.charAt((palindromaWord.length - i - 1));
-    console.log(lastCharWord);
-
-
-    if (starChartWord === lastCharWord) {
-      check +=  1;
-      console.log(check);
-    } 
+    arrayMirrored.push(lastCharWord);
+    console.log(starChartWord);
+    console.log(arrayMirrored);
     
   }
-    if (check == palindromaWord.length ) {
-      return true;
-    } else {
-      return false;
-    }
+
+  if ( arrayStar === arrayMirrored ) {
+    alert(arrayMirrored + " Questa parola è palindroma");
+    console.log(arrayStar);
+    return true;
+  } else {
+    alert(arrayStar + " Questa parola non è palindroma e questo è il suo specchiato " + arrayMirrored);
+    console.log(arrayMirrored);
+    return false;
+  }
 
 }
 
 if (palindormaChecker(userWord)) {
-  alert("Questa parola è palindroma");
-} else {
-  alert("Questa parola non è palindroma");
-}
+} 

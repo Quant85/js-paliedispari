@@ -18,7 +18,11 @@ userChoiceNumber =Number(prompt("Scegli un numero da 1 a 5"));
 console.log("L'utente ha dichiarato ", userChoice, "ed ha scelto come numero", userChoiceNumber);
 
 //2. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-
+/**
+ * Questa funzione permette di generare un numero random compreso in un intervallo definito tra due numeri interi, min e max
+ * @param {int} min 
+ * @param {*} max 
+ */
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
