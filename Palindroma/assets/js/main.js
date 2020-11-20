@@ -33,16 +33,17 @@ function palindormaChecker(palindromaWord) {
   }
 
   if ( arrayStar === arrayMirrored ) {
+    //var stringMirrored = arrayMirrored.toString;
     alert(arrayMirrored + " Questa parola è palindroma");
     console.log(arrayStar);
     return true;
   } else {
-    alert(arrayStar + " Questa parola non è palindroma e questo è il suo specchiato " + arrayMirrored);
+    //var stringStar = arrayStar.toString;
+    alert(arrayStar + " Questa parola non è palindroma ed il suo specchiato è " + arrayMirrored);
     console.log(arrayMirrored);
     return false;
   }
 
 }
 
-if (palindormaChecker(userWord)) {
-} 
+(palindormaChecker(userWord));
