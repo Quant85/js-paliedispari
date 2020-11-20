@@ -8,6 +8,10 @@ var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma");
 
 //2. Creare una funzione per capire se la parola inserita è palindroma
 
+/**** Funzione che permette di verificare mediante confronto sistemico, se una stringa è palindroma ovvero i caratteri che la compongono seppur specchiati di posizione restano identici
+ * @param string 
+ * @returns  true  verificata - false non verificata
+ */
 function palindormaChecker(palindromaWord) {
   var starChartWord, lastCharWord, check = 0;
 
