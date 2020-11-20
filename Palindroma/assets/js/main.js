@@ -13,34 +13,37 @@ var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma");
  * @returns  true  verificata - false non verificata
  */
 function palindormaChecker(palindromaWord) {
-  var starChartWord, lastCharWord;
-  var arrayStar = [];
-  var arrayMirrored = [];
+  var starChartWord, lastCharWord, arrayStar, arrayMirrored, stringStar, stringMirror, positiveCheckMessage,negativeCheckMessage;
+  arrayStar = [];
+  arrayMirrored = [];
+  positiveCheckMessage = "  - questa stringa è palindroma ed il suo specchiato è : ";
+  negativeCheckMessage = "  - questa stringa non è palindroma ed il suo specchiato è : ";
 
   for (var i = 0; i < palindromaWord.length; i++) {
 
-    //var starChartWord = userWord.charAt(i), lastCharWord = userWord.charAt((palindromaWord.length - i)), check, sumCheck;    
+    //var starChartWord = userWord.charAt(i), lastCharWord = userWord.charAt((palindromaWord.length - i));    
 
     starChartWord = userWord.charAt(i);
     console.log(starChartWord);
     arrayStar.push(starChartWord);
-    console.log(arrayStar);
     lastCharWord = userWord.charAt((palindromaWord.length - i - 1));
     arrayMirrored.push(lastCharWord);
-    console.log(starChartWord);
-    console.log(arrayMirrored);
-    
+    console.log(lastCharWord);
   }
+  stringMirror = arrayMirrored.join("");
+  console.log(arrayMirrored);
+  console.log(stringMirror);
 
-  if ( arrayStar === arrayMirrored ) {
-    //var stringMirrored = arrayMirrored.toString;
-    alert(arrayMirrored + " Questa parola è palindroma");
-    console.log(arrayStar);
+  stringStar = arrayStar.join("");
+  console.log(arrayStar);
+  console.log(stringStar);
+
+  if ( stringStar === stringMirror ) {
+    alert(stringMirror + positiveCheckMessage + stringMirror);
+    console.log(stringMirror);
     return true;
   } else {
-    //var stringStar = arrayStar.toString;
-    alert(arrayStar + " Questa parola non è palindroma ed il suo specchiato è " + arrayMirrored);
-    console.log(arrayMirrored);
+    alert(stringStar + negativeCheckMessage + stringMirror);
     return false;
   }
 
