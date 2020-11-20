@@ -4,7 +4,7 @@ Creare una funzione per capire se la parola inserita è palindroma */
 
 //1. Chiedere all’utente di inserire una parola
 
-var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma");
+var userWord = prompt("Inserisci la parola che vuoi verificare sia palindroma").toLowerCase();
 
 //2. Creare una funzione per capire se la parola inserita è palindroma
 
